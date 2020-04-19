@@ -4,19 +4,19 @@ Unity Project Tiny 编译到微信小游戏
 总体介绍
 --------
 
-这个项目用于验证Unity Project Tiny 编译到微信小游戏的可行性。
+[hwei/UnityProjectTinyToWeapp](https://github.com/hwei/UnityProjectTinyToWeapp) 项目用于验证Unity Project Tiny 编译到微信小游戏的可行性。
 
 ### 前提条件
 * Project Tiny 的版本是 com.unity.tiny.all@0.24
 * 使用 asmjs 模式编译
 * 微信小游戏的调试基础版本是 2.10.4
-* 使用[/Unity-Technologies/ProjectTinySamples](https://github.com/Unity-Technologies/ProjectTinySamples) 中的Tiny3D 工程作为验证对象。
-* 使用[/finscn/weapp-adapter](https://github.com/finscn/weapp-adapter) 代替默认的weapp-adapter。并稍加改造，让它读取本地包文件的时候自动加`.scene`后缀s。
+* 使用[Unity-Technologies/ProjectTinySamples](https://github.com/Unity-Technologies/ProjectTinySamples) 中的Tiny3D 工程作为验证对象。
+* 使用[finscn/weapp-adapter](https://github.com/finscn/weapp-adapter) 代替默认的weapp-adapter。并稍加改造，让它读取本地包文件的时候自动加`.scene`后缀s。
 * 在iPhone 6s 上测试运行。
 
 ### 结论
 * Unity Project Tiny 的确可以编译为微信小游戏，并在**实机**上运行。
-* 运行性能很低，无法接受。
+* 运行性能很低，无法接受。Draw call 非常高。
 * 音频适配有问题。微信小游戏不支持AudioContext。需要手动开发音频系统。
 * 触摸事件的适配是正常的。但欠缺UI 模块，交互开发比较困难。
 
